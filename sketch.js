@@ -103,6 +103,21 @@ function GameOver() {
    var O = new Obs(size);
    obstacles.push(O);
  }
+function score2() {
+  if (frameCount % 10 == 0) scorenum ++;
+  var score = 'Score - ' + scorenum;
+  textSize(15);
+  fill(0);
+  textAlign(CENTER);
+  nameWidht = textWidth(score);
+  text(score, 400, 20);
+  var Highscore = 'Highscore - ' + Hscore;
+  textSize(15);
+  fill(0);
+  textAlign(CENTER);
+  nameWidht = textWidth(score);
+  text(Highscore, 720, 20);
+}
 
 function keyPressed() {
   if (keyCode == ENTER && !game){
