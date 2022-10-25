@@ -64,6 +64,21 @@ function generateObs() {
     }
 }
 
+function drawLm() {
+    background(255, 229, 86);
+    score();
+    vol = mic.getLevel();
+    if(frameCount % 180 == 0) speed *= 1.05;
+    generateObs();
+    stroke(0);
+    line(0, 175, windowWidth, 175);
+    fill(0);
+    ellipse(150, y, 50);
+    updateobs();
+    control();
+}
+
+
 function updateobs() {
   for (var i = obstacles.length - 1; i >= 0; i --){
 
