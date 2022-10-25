@@ -113,6 +113,18 @@ function GameOver() {
   scorenum = 0;
 }
 
+function gameReset() {
+  noLoop();
+  collision.play();
+  textSize(40);
+  Hscore = max(Hscore, scorenum);
+  text("Game Over :(", 400, 80);
+  textSize(15);
+  text("press enter for new game", 400, 105);
+  game = false;
+  scorenum = 0;
+}
+
  function newObs() {
    var size = random(20, 70);
    var O = new Obs(size);
